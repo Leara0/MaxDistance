@@ -7,4 +7,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Update="TacoBell-US-AL.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GeoCoordinate" Version="2.0.1" />
+      <PackageReference Include="Geolocation" Version="1.2.1" />
+      <PackageReference Include="System.Device.Location.Portable" Version="1.0.0" />
+    </ItemGroup>
+
 </Project>

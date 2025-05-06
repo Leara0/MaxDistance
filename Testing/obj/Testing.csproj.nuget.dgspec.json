@@ -48,6 +48,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "GeoCoordinate": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Geolocation": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "System.Device.Location.Portable": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

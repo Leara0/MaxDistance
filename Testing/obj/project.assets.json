@@ -8,6 +8,25 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "GeoCoordinate/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        }
+      },
+      "Geolocation/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Geolocation.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Geolocation.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/17.8.0": {
         "type": "package",
         "compile": {
@@ -643,6 +662,15 @@
           "ref/netstandard1.3/System.Console.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Device.Location.Portable/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/System.Device.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/System.Device.Portable.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -1712,6 +1740,11 @@
       "MainProgram/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "GeoCoordinate": "2.0.1",
+          "Geolocation": "1.2.1",
+          "System.Device.Location.Portable": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/MainProgram.dll": {}
         },
@@ -1773,6 +1806,35 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "GeoCoordinate/2.0.1": {
+      "sha512": "Am5GANF7uS3vlYBHExLtouH/Yrsc+6182nTdxXfnYCCVF/mO6TRO5QQhJVWXd5PjVdNnb6rHbkHiDR9verwnig==",
+      "type": "package",
+      "path": "geocoordinate/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "geocoordinate.2.0.1.nupkg.sha512",
+        "geocoordinate.nuspec",
+        "src/GeoCoordinate.cs",
+        "src/GeoPosition.cs"
+      ]
+    },
+    "Geolocation/1.2.1": {
+      "sha512": "qvdjGKWydk4hKmyGvIExkpNhJ0qoAk88f+wTsuQ6Bdb6Zl2MJccmQRKF2DLtAuuGSkeF9N99BbO2eKk4F932Mw==",
+      "type": "package",
+      "path": "geolocation/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "geolocation.1.2.1.nupkg.sha512",
+        "geolocation.nuspec",
+        "lib/net451/Geolocation.dll",
+        "lib/net451/Geolocation.pdb",
+        "lib/netstandard2.0/Geolocation.dll",
+        "lib/netstandard2.0/Geolocation.pdb"
       ]
     },
     "Microsoft.CodeCoverage/17.8.0": {
@@ -2623,6 +2685,18 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
+      ]
+    },
+    "System.Device.Location.Portable/1.0.0": {
+      "sha512": "VttxozXEleYcK2NiMo7xKMhDCCJbKtjnxcWDmqu703DeceLTI/9jopfEblyZKL0DWHGyOYLEan06yk6Hcv2cXw==",
+      "type": "package",
+      "path": "system.device.location.portable/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/System.Device.Portable.dll",
+        "system.device.location.portable.1.0.0.nupkg.sha512",
+        "system.device.location.portable.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -5612,5 +5686,17 @@
         "runtimeIdentifierGraphPath": "C:\\Users\\Sehers\\.dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Device.Location.Portable 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Device.Location.Portable",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
