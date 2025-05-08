@@ -1,19 +1,29 @@
 namespace MainProgram;
 
-public class TacoLogger: ILog
+public class TacoLogger : ILog
 {
-    public void LogStart(string message)
+    public void LogInfo(string message)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Info: {message}");
     }
 
-    public void LogError(string message)
+    public void LogWarning(string message)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Warning: {message}");
     }
 
-    public void LogException(string message, Exception ex)
+    public void LogDebug(string message)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Debug: {message}");
+    }
+
+    public void LogError(string message, Exception? ex = null)
+    {
+        Console.WriteLine($"Info: {message}, Exception: {ex}");
+    }
+
+    public void LogFatal(string message, Exception? ex = null)
+    {
+        Console.WriteLine($"Info: {message}, Exception: {ex }");
     }
 }

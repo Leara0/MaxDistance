@@ -27,5 +27,6 @@ for (int i = 0; i < line.Length; i++)
     }
 }
 
-Console.WriteLine($"The two farthest Taco Bells are {farthestA} and {farthestB}. They are {distance:F2} meters apart.");
-Console.WriteLine($"The distance in miles is {distance/1609.34:F2} miles.");
+var logger = new TacoLogger();
+logger.LogInfo($"The two farthest Taco Bells are {farthestA} and {farthestB}. They are {distance:F2} meters apart.");
+logger.LogInfo($"The distance in miles is approximately {distance/1609.34:F0} miles.");
