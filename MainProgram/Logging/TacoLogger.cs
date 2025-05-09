@@ -19,11 +19,11 @@ public class TacoLogger : ILog
 
     public void LogError(string message, Exception? ex = null)
     {
-        Console.WriteLine($"Info: {message}, Exception: {ex}");
+        Console.WriteLine($"Error: {message}, Exception: {ex}");
     }
 
     public void LogFatal(string message, Exception? ex = null)
     {
-        Console.WriteLine($"Info: {message}, Exception: {ex }");
+        Console.WriteLine($"Fatal: {message}, Exception: {ex }");
     }
 }
